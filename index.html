@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -30,19 +30,19 @@
 
       </div>
     </div>
-    <div class="container-fluid">
-
-    <div class="row mt-5 text-center" >
+    <div class="row mt-5" >
     
-      <div class="col-lg-6 col-md-6 col-6" >
-        <img src="/Images/ImgPuzzle.jpg" id="img1" width="200" height="120" class="img-fluid"/>
+      <div class="col-4">
+        <img src="/Images/ImgPuzzle.jpg" id="img1" width="200" height="120"/>
       </div>
    
-      <div class="col-lg-6 col-md-6 col-6">
-        <img src="/Images/ImgPuzzle.jpg" id="img2" width="200" height="120" class="img-fluid "/>
+      <div class="col-4">
+        <img src="/Images/ImgPuzzle.jpg" id="img2" width="200" height="120"/>
       </div>
-      
-    </div>
+      <div class="col-4">
+        <img src="/Images/ImgPuzzle.jpg" id="img2" width="200" height="120"/>
+      </div>
+    
     </div>
     <!-- Form content starts here -->
     <form role="form" id="mainForm">
@@ -56,35 +56,28 @@
   
   
   
-  
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
 
-     <!-- TODO: Add SDKs for Firebase products that you want to use
-          https://firebase.google.com/docs/web/setup#available-libraries -->
-     
-     <script>
-       // Your web app's Firebase configuration
-       var firebaseConfig = {
-         apiKey: "AIzaSyA7uz1-usLdWLsJEcxNOSU8WZurUGaxlk4",
-         authDomain: "puzzle-cc446.firebaseapp.com",
-         databaseURL: "https://puzzle-cc446.firebaseio.com",
-         projectId: "puzzle-cc446",
-         storageBucket: "puzzle-cc446.appspot.com",
-         messagingSenderId: "608633270648",
-         appId: "1:608633270648:web:d1a590374190c04885588d"
-       };
-       // Initialize Firebase
-       firebase.initializeApp(firebaseConfig);
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7uz1-usLdWLsJEcxNOSU8WZurUGaxlk4",
+    authDomain: "puzzle-cc446.firebaseapp.com",
+    databaseURL: "https://puzzle-cc446.firebaseio.com",
+    projectId: "puzzle-cc446",
+    storageBucket: "puzzle-cc446.appspot.com",
+    messagingSenderId: "608633270648",
+    appId: "1:608633270648:web:d1a590374190c04885588d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 </script>
-
 </body>
 </html>
 
-<script src="App.js"></script>
+<script src="index.js"></script>
