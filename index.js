@@ -42,7 +42,7 @@ db.collection('Puzzle').get().then(snapshot =>{
             <div class="panel-body">
                 <div class="form-group">
                     <!--<label class="control-label">Arange Puzzle</label>-->
-                    <input maxlength="100" type="text" required="required" class="form-control textclass" id="txtInput" placeholder="Enter puzzle words" />
+                    <input maxlength="100" type="text" required="required" class="form-control textclass"  placeholder="Enter puzzle words" />
                 </div>
                 <div class="form-group puzzleButtons" id="puzzleButtons-${counter}">
                     ${
@@ -123,6 +123,7 @@ $(document).ready(function () {
                     document.getElementById('divMessage').style.display="block";
                     $('#pMessage').text("Less than the required Puzzle word");
                     $('#divMessage').delay(3000).fadeOut('slow');
+                    e.preventDefault();
                 }
                     
                 else if(curInputValueinteger > Answerinteger)
@@ -130,6 +131,8 @@ $(document).ready(function () {
                     document.getElementById('divMessage').style.display="block";
                     $('#pMessage').text("Exceeded the Puzzle word");
                     $('#divMessage').delay(3000).fadeOut('slow');
+                    e.preventDefault();
+
                 }
                     
                 else
@@ -141,12 +144,16 @@ $(document).ready(function () {
                             $('#divMessage').delay(3000).fadeOut('slow');
                             nextStepWizard.removeAttr('disabled').trigger('click');
                             $("#txtInput").val(null);
+                            e.preventDefault();
+
                         }
                         else
                         {
                             document.getElementById('divMessage').style.display="block";
                             $('#pMessage').text("In-Correct");
                             $('#divMessage').delay(3000).fadeOut('slow');
+                            e.preventDefault();
+
                         }
                     }
             }
@@ -155,9 +162,9 @@ $(document).ready(function () {
         $('div.setup-panel div a.btn-success').trigger('click');
 
         $('.dynamicButtons').click(function(event){
-            event.preventDefault();
             var data = $('.textclass').val();
             $('.textclass').val(data + event.target.innerText);
+            event.preventDefault();
         });
     }, 1000);
 });
